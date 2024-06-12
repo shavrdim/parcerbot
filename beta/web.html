@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Price Tracker</title>
+<style>
+    /* стили CSS */
+</style>
+</head>
+<body>
+<h1>Price Tracker</h1>
+
+<div>
+    <label for="wildberries-url">URL Wildberries:</label>
+    <input type="text" id="wildberries-url">
+    <button onclick="trackPrice('wildberries')">Отследить цену</button>
+</div>
+
+<div>
+    <label for="ozon-url">URL Ozon:</label>
+    <input type="text" id="ozon-url">
+    <button onclick="trackPrice('ozon')">Отследить цену</button>
+</div>
+
+<div id="wildberries-price"></div>
+<div id="ozon-price"></div>
+
+<script>
+    function trackPrice(site) {
+        let url = '';
+        if(site === 'wildberries') {
+            url = document.getElementById('wildberries-url').value;
+        } else if(site === 'ozon') {
+            url = document.getElementById('ozon-url').value;
+        }
+
+        // отправка запроса на сервер для получения цены по URL
+        // обработка ответа и отображение цены на странице
+    }
+</script>
+</body>
+</html>
